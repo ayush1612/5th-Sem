@@ -1,14 +1,19 @@
-# Write a python program to read in a list of elements
-# Create a new list that holds all the elements minus the duplicates(Use functions)
-
 def remove_duplicates(numbers):
 	newlist = []
 	for number in numbers:
+		print(number)
 		if number not in newlist:
 			newlist.append(number)
 		
-	
+	print(numbers)
 	print(newlist)
 	return newlist
 
-remove_duplicates([1,2,3,4,4,4,5,5,6,7,8,8,8,8,9])
+# python 2
+#list = raw_input("Enter the elements").split(",")
+
+# python 3
+s = input()
+list = list(map(int,s.split()))
+#remove_duplicates([1,2,3,4,4,4,5,5,6,7,8,8,8,8,9])
+remove_duplicates(list)
