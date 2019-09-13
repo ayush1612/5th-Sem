@@ -11,4 +11,4 @@ print("Number of words in the file:",word_count("test.txt"))
 # line 2 : imported counter from the library 'Collections'
 # line 3 : made a function named 'word_count'
 # line 4 : opened a file using fname and stored in a variable 'f'
-# line 5 : return the number of words in the file having that string
+# line 5 : return the count of the words in the file
