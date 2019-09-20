@@ -10,5 +10,5 @@ for i in lst:
 		print(i," is divisibe by 5")
 	if i%7==0:
 		print(i," is divisible by 7")
-	elif i%5!=0 and i%7!=0:
+	if i%5!=0 and i%7!=0:
 		print(i," is neither divisible by 5 nor by  7")
