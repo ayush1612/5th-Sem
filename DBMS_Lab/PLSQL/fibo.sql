@@ -1,0 +1,19 @@
+declare
+	first number := 0;
+	second number := 1;
+	n number := 7;
+	temp number;
+	i number;
+begin
+	dbms_output.put_line('Series');
+	dbms_output.put_line(first);
+	dbms_output.put_line(second);
+
+	for i in 2..n loop
+		temp:=first+second;
+		first:=second;
+		second:=temp;
+		dbms_output.put_line(temp);	
+	end loop;
+end;
+/		
