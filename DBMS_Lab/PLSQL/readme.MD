@@ -1,6 +1,14 @@
 ## NOTES during lab
 
-<strong>1. DECLARE ---> not necessary but used to declare variable
+| Commands | Description |
+| DECLARE | to declare variables |
+| BEGIN | to begin execution of the following statements |
+| PRINT | to print |
+| IF ELSE | Condition based execution |
+| FOR LOOP | For certain number of iterations of statements |
+
+
+<strong>1. DECLARE ---> not necessary but used to declare variable<br>
 2. BEGIN   ---> to start execution of some statements</strong>
 
 <hr>
