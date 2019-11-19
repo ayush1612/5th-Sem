@@ -1,13 +1,14 @@
+## NOTES during lab
 
-### DECLARE ---> not necessary but used to declare variable
-### BEGIN   ---> to start execution of some statements
+<strong>1. DECLARE ---> not necessary but used to declare variable
+2. BEGIN   ---> to start execution of some statements</strong>
 
 <hr>
 
 #### Print command
 
 ```
-dbms_output.put_line(<string>);
+	dbms_output.put_line(<string>);
 ```
 
 <hr>
