@@ -63,7 +63,7 @@ Few things to know:
  * Restarting with stat
  * Debugger is active!
 ```
-<strong> What just happened? </strong>
+<strong> What just happened? </strong><br>
 3. The file `application.py` ran and went to this line 
 
 ```
