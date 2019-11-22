@@ -1,4 +1,4 @@
-## REMEMBER ME :smile
+## TO REMEMBER
 
 1. import flask
 
