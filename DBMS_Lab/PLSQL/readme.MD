@@ -2,6 +2,8 @@
 ### For running the plsql code :computer: go to [this link](https://www.thecrazyprogrammer.com/2017/09/plsql-online-compiler.html) and follow the steps. :pencil:
 (Use [APEX ORACLE ](https://apex.oracle.com/en/learn/getting-started/))
 
+<hr>
+
 ## NOTES during lab :books:
 
  Commands | Description 
@@ -13,6 +15,8 @@
  FOR LOOP | For certain number of iterations of statements 
  <br>
  <br>
+
+<hr>
 
 # :computer: :keyboard: <br>
 <strong>1. DECLARE ---> not necessary but used to declare variable<br>
