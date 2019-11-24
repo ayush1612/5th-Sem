@@ -1,4 +1,4 @@
-## NOTES during lab
+## NOTES during lab :books:
 
  Commands | Description 
  --- | ---
@@ -30,7 +30,7 @@
 	dbms_output.put_line(<string 1> || <string 2>);
 ```
 
-#### `!!!!!!!!!!! Make connection with server for buffer outputs !!!!!!!!!!!`
+## IMPORTANT : Make connection with server for buffer outputs !!!!!!!!!!!
 
 
 <hr>
