@@ -1,3 +1,7 @@
+
+### For running the plsql code :computer: go to [this link](https://www.thecrazyprogrammer.com/2017/09/plsql-online-compiler.html) and follow the steps. :pencil:
+(Use [APEX ORACLE ](https://apex.oracle.com/en/learn/getting-started/))
+
 ## NOTES during lab :books:
 
  Commands | Description 
