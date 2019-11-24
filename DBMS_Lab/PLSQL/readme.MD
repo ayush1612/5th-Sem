@@ -14,8 +14,10 @@
 <strong>1. DECLARE ---> not necessary but used to declare variable<br>
 2. BEGIN   ---> to start execution of some statements</strong>
 
-<hr>
+<hr><br>
 
+
+# :printer:<br>
 #### Print command
 
 
@@ -30,8 +32,9 @@
 ```
 	dbms_output.put_line(<string 1> || <string 2>);
 ```
+<br/><br/><br/>
 
-## IMPORTANT : Make connection with server for buffer outputs !!!!!!!!!!!
+## :pencil: IMPORTANT : Make connection :satellite: with server for buffer outputs !!!!!!!!!!!
 
 <hr>
 
@@ -50,6 +53,7 @@
 
 	PL/SQL procedure successfully completed.
 ```
+
 #### Comments in plsql
 
 
@@ -67,6 +71,9 @@
 	:=  Assignment
 	= 	equality
 ```
+
+<br/><br/>
+
 #### Mathematical functions
 
 
