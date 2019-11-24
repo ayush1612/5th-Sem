@@ -10,6 +10,7 @@
  <br>
  <br>
 
+# :computer:<br>
 <strong>1. DECLARE ---> not necessary but used to declare variable<br>
 2. BEGIN   ---> to start execution of some statements</strong>
 
@@ -31,7 +32,6 @@
 ```
 
 ## IMPORTANT : Make connection with server for buffer outputs !!!!!!!!!!!
-
 
 <hr>
 
