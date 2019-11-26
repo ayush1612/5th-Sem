@@ -1,0 +1,3 @@
+This is a text file to be used in the program 1.py in the b() function using Counter imported from collections library.
+The function opens the file using the open() function and fname  is the name of the file. After opening we are naming it as f.
+Thus with the help of Counter() function we are able to get the frequency of each and every distinct word in the file.
