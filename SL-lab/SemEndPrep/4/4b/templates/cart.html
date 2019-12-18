@@ -1,0 +1,11 @@
+<DOCTYPE html>
+    <body>
+        <h1>Items in the cart:</h1>
+        {% for item in cart %}
+        {{item['name']}}:{{item['quantity']}}<br><br>
+        {% endfor %}
+        <br>
+        
+        <a href="/"><button>Add more items</button></a>
+    </body>
+</DOCTYPE>

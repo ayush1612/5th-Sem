@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<body>
+    <h3>Balance:{{balance}}</h3>
+    <h3>{{msg}}</h3>
+
+    <form action='/' method="POST">
+        <input type='number' name='amt' value=''>
+        <input type='submit' name='action' value='Withdraw' onclick='check()'>
+        <input type='submit' name='action' value='Deposit' onclick='check()'>    
+    </form>
+    <script>
+        function check()
+        {
+            var amt = document.getELementbyId('amt')
+            if(amt=="" || parseInt(amt<0))
+                alert('Enter a legitimate amount')
+            // if({{count}} == 5)
+            //     alert("No more transactions allowed")
+        }
+    </script>
+</body>

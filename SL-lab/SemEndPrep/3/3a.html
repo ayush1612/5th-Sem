@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSON of Authors</title>
+    </head>
+
+    <body>
+
+            <script>
+                    author=[
+                        {
+                            'name':'Yuvah',
+                            'title':'Sapiens',
+                            'country':'USA',
+                            'year':'2010'
+                        },
+                        {
+                            'name':'Dan Brown',
+                            'title':'Origin',
+                            'country':'Russia',
+                            'year':'2017'
+                        },
+                        {
+                            'name':'Ashlee Vance',
+                            'title':'Elon Musk',
+                            'country':'New York',
+                            'year':'2012'
+                        },
+                        {
+                            'name':'Noah',
+                            'title':'Deus',
+                            'country':'California',
+                            'year':'2014'
+                        }
+                    ]
+                </script>
+        <table>
+            <tr>
+                    <th>Author name</th>
+                    <th>Native Country</th>    
+                    <th>Story title</th>
+                    <th>Publication year</th>
+            </tr>
+            <script>
+                for(i=0;i<2;i++){
+                    document.write("<tr><td>"+author[i]['name']+"</td><td>"+author[i]['country']
+                    +"</td><td>"+author[i]['title']+"</td><td>"+author[i]['year']+"</td></tr>")
+                }
+            </script>
+           
+        </table>
+        <script>
+        
+        for(i=2;i<4;i++){
+                    document.write("<p><strong>Name:"+author[i]['name']+"<br>Country:"+author[i]['country']
+                    +"<br>Title:"+author[i]['title']+"<br>Year:"+author[i]['year']+"<strong></p>")
+                }
+        </script>
+
+    </body>
+</html>
