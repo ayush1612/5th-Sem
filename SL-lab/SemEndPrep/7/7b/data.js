@@ -29,7 +29,7 @@ window.onload = function(){
 
     Cars.forEach(mouseEventHandler)
 
-    function mouseEventHandler(item,index){
+    function mouseEventHandler(item){
         car = document.getElementById(item.model)
 
         car.onmouseover = function(){
