@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Authors</title>
+    </head>
+
+    <body>
+        <h1>Author's Details</h1>
+        <table id='author' border=1.0>
+            <tr>
+                <th>Author Name</th>
+                <th>Native Country</th>
+                <th>Story Title</th>
+                <th>Publication Year</th>
+            </tr>
+        </table>
+        <hr>
+            
+            <script>
+                Authors = [
+                    {
+                        'name':'Dan Brown',
+                        'country':'Russia',
+                        'title' : 'Inferno',
+                        'year':2010
+                    },
+                    {
+                        'name':'Gautam Ghosh',
+                        'country':'India',
+                        'title':'Swami Vivekananda',
+                        'year':2006
+                    },
+                    {
+                        'name':'Gulzar',
+                        'country':'India',
+                        'title':'Mirza Ghalib',
+                        'year':2008
+                    },
+                    {
+                        'name':'Daniel Kanheiman',
+                        'country':'Canada',
+                        'title':'Thinking Fast and Slow',
+                        'year':2012
+
+                    }
+                ]
+                for(i=0;i<2;i++){
+                    tr = document.createElement('tr')
+                    tr.innerHTML = "<td>"+Authors[i]['name']+"</td><td>"+Authors[i]['country']+"</td><td>"+Authors[i]['title']+"</td><td>"+Authors[i]['year']+"</td>"
+                    document.getElementById('author').appendChild(tr)
+                }
+                
+                for(i=2;i<4;i++){
+                    document.write("<strong>Author's Name : </strong>"+Authors[i]['name']+"<br><strong>Native Country : </strong>"+Authors[i]['country']+"<br><strong>Story Title : </strong>"+Authors[i]['title']+"<br><strong>Publication Year : </strong>"+Authors[i]['year']+"<br><hr>")
+                }
+            
+        </script>
+
+    </body>
+</html>
