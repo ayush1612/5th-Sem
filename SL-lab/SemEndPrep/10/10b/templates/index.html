@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Information System</title>
+    </head>
+    <body>
+        <h1>Student Information System</h1>
+        <h3>{{msg}}</h3>
+        <form action='/' method='POST'>
+            <strong>DETAILS </strong><br><br>
+            
+            USN : <input type='text' name='student-usn' id='student-usn'><br><br>
+            DOB : <input type='text' name='student-dob' id='student-dob'><br><br>
+
+            <strong>MARKS</strong>
+            <br><br>
+            Subject 1: <input type='number' min='0' name='student-marks1' id='student-marks1'><br><br>
+            Subject 2: <input type='number' min='0' name='student-marks2' id='student-marks2'><br><br>
+            Subject 3: <input type='number' min='0' name='student-marks3' id='student-marks3'><br><br>
+            <input type='submit' class='button' value='Submit' onclick='check()'><br>
+
+        </form>
+
+        <script>
+            function check(){
+
+                usn = document.getElementById('student-usn').value
+                dob = document.getElementById('student-dob').value
+                m1 = document.getElementById('student-marks1').value
+                m2 = document.getElementById('student-marks2').value
+                m3 = document.getElementById('student-marks3').value
+    
+                if(usn == '' || dob == '' || m1 == '' || m2 == '' || m3 == '')
+                    alert('Empty fields not allowed')
+                
+            }
+        </script>
+    </body>
+</html>
