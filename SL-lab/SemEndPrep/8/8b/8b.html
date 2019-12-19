@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hospital Management</title>
+    </head>
+
+    <body>
+        <h1>Hospital Details</h1>
+        <table border=1.0>
+            <tr>
+                <th>Name</th>
+                <th>Location</th>
+            </tr>
+            <script>
+                Hospitals = [
+                    {
+                        'name' : 'Ramaiah Hospital',
+                        'location' : 'New BEL road'
+                    },
+                    {
+                        'name' : 'Shri Hospital',
+                        'location' : 'M S R Nagar'
+                    },
+                    {
+                        'name' : 'RMV Hospital',
+                        'location' : '2nd Stage, Mathikere'
+                    }
+                ]
+                for(var i=0;i<Hospitals.length;i++){
+                    document.write("<tr><td>"+Hospitals[i]['name']+"</td><td>"+Hospitals[i]['location']+"</td></tr>")
+                }
+                </script>
+        </table>
+        <br>
+        <span id='patient-details'><strong>Patient Details</strong></span>
+        <script>
+            Patients = [
+                {
+                    'name':'Chester',
+                    'aadhar':123,
+                    'lab_tests':['Dengue','Cholera']
+                },
+                {
+                    'name' : 'Liam',
+                    'aadhar' : 234,
+                    'lab_tests' : ['Typhoid','Jaundice']
+                },
+                {
+                'name':'Michael',
+                'aadhar' : 345,
+                'lab_tests' : ['Drug Overdose','Pneumonia']
+                }
+            ]
+
+            elem = document.getElementById('patient-details')
+            p = document.createElement("p")
+            p.id = 'details'
+            
+            elem.onmouseover = function(){
+                elem.style='color:green'
+                for(var i=0;i<Patients.length;i++){
+                    p.innerHTML = p.innerHTML + "<i>Name : </i>"+Patients[i]['name']+"<br><i>Aadhar Number :</i>"+Patients[i]['aadhar']+"<br><i>Lab Tests:</i>"+Patients[i].lab_tests+"<br><br>"
+                }
+            }
+            p.style = "color:black"
+            elem.appendChild(p)
+
+            elem.onmouseout = function(){
+                elem.style = 'color:black'
+                document.getElementById('details').innerHTML = ''
+            }
+        </script>
+    </body>
+</html>
