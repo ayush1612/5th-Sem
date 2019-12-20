@@ -6,8 +6,15 @@
 
     <body>
 
+        <table border=1.0>
+            <tr>
+                    <th>Author name</th>
+                    <th>Native Country</th>    
+                    <th>Story title</th>
+                    <th>Publication year</th>
+            </tr>
             <script>
-                    author=[
+                 author=[
                         {
                             'name':'Yuvah',
                             'title':'Sapiens',
@@ -33,15 +40,6 @@
                             'year':'2014'
                         }
                     ]
-                </script>
-        <table>
-            <tr>
-                    <th>Author name</th>
-                    <th>Native Country</th>    
-                    <th>Story title</th>
-                    <th>Publication year</th>
-            </tr>
-            <script>
                 for(i=0;i<2;i++){
                     document.write("<tr><td>"+author[i]['name']+"</td><td>"+author[i]['country']
                     +"</td><td>"+author[i]['title']+"</td><td>"+author[i]['year']+"</td></tr>")
