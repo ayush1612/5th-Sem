@@ -3,7 +3,7 @@
 #define MIN(x,y) (x>y)?y:x
 
 int main(){
-    int rate=10,drop=0,cap=100,x,count=0,inp[30]={0},i=0,nsec,ch;
+    int rate=10,drop=0,cap=100,x,count=0,inp[30]={0},i=0,nsec;
     printf("\n Bucket size : %d",cap);
     printf("\n Output rate : %d",rate);
     srand(time(0));
