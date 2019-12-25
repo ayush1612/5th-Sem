@@ -1,0 +1,82 @@
+
+
+3.Create the below tables, insert suitable tuples and perform the following operations using  MongoDB
+BOAT (BID, BNAME, COLOUR)
+RESERVES (BID, SNAME, SID, DAY)
+a.Obtain the number of boats obtained by sailor :#sname
+b.Retrieve boats of color :”White”
+Solution:
+Create the collection:db.createCollection("BOATRES")
+Insert the values:
+db.BOATRES.insert({"BID":9988,"BNAME":'ABC',"COLOUR":'Black',"SNAME":'John',"SID":1234,"DAY":'2017-12-25'})
+ db.BOATRES.insert({"BID":8877,"BNAME":'DEF',"COLOUR":'Black',"SNAME":'Smith',"SID":4567,"DAY":'2017-11-24'})
+db.BOATRES.insert({"BID":7766,"BNAME":'GHI',"COLOUR":'Blue',"SNAME":'Sucre',"SID":1122,"DAY":'2017-10-24'})
+db.BOATRES.insert({"BID":6655,"BNAME":'PQR',"COLOUR":'white',"SNAME":'Sucre',"SID":1122,"DAY":'2017-10-29'})
+
+ db.BOATRES.find().pretty()
+
+
+{
+	"_id" : ObjectId("5a0d946fd11053b18180fdb5"),
+	"BID" : 9988,
+	"BNAME" : "ABC",
+	"COLOUR" : "Black",
+	"SNAME" : "John",
+	"SID" : 1234,
+	"DAY" : "2017-12-25"
+}
+{
+	"_id" : ObjectId("5a0d949ed11053b18180fdb6"),
+	"BID" : 8877,
+	"BNAME" : "DEF",
+	"COLOUR" : "Black",
+	"SNAME" : "Smith",
+	"SID" : 4567,
+	"DAY" : "2017-11-24"
+}
+{
+	"_id" : ObjectId("5a0d94ccd11053b18180fdb7"),
+	"BID" : 7766,
+	"BNAME" : "GHI",
+	"COLOUR" : "Blue",
+	"SNAME" : "Sucre",
+	"SID" : 1122,
+	"DAY" : "2017-10-24"
+}
+{
+	"_id" : ObjectId("5a0d94f7d11053b18180fdb8"),
+	"BID" : 6655,
+	"BNAME" : "PQR",
+	"COLOUR" : "white",
+	"SNAME" : "Sucre",
+	"SID" : 1122,
+	"DAY" : "2017-10-29"
+}
+
+a.Obtain the number of boats obtained by sailor :Sucre
+db.BOATRES.find({"SNAME":'Sucre'}).count()
+Output:2
+
+
+b.Retrieve boats of color :”Black”
+
+db.BOATRES.find({"COLOUR":'Black'}).pretty()
+Output:
+{
+	"_id" : ObjectId("5a0d946fd11053b18180fdb5"),
+	"BID" : 9988,
+	"BNAME" : "ABC",
+	"COLOUR" : "Black",
+	"SNAME" : "John",
+	"SID" : 1234,
+	"DAY" : "2017-12-25"
+}
+{
+	"_id" : ObjectId("5a0d949ed11053b18180fdb6"),
+	"BID" : 8877,
+	"BNAME" : "DEF",
+	"COLOUR" : "Black",
+	"SNAME" : "Smith",
+	"SID" : 4567,
+	"DAY" : "2017-11-24"
+}

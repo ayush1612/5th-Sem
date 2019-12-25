@@ -1,0 +1,154 @@
+
+2.
+Create the below tables, insert suitable tuples and perform the following operations using  MongoDB
+PART (PNO,PNAME, COLOUR), 
+SUPPY (SNO, SNAME, PNO, ADDRESS)
+a.Update the parts identifier 
+b.Display all suppliers who supply the part with part identifier: #PNO
+
+
+Solution:
+
+Create the collection:
+ >db.createCollection("WAREHOUSE")
+
+Inserting the values:
+
+>db.WAREHOUSE.insert({"PNO":1947,"Pname":'bolts',"Colour":'Black',"SNO":1234,"Sname":'ABC',"Address":'blore'})
+>db.WAREHOUSE.insert({"PNO":1950,"Pname":'chain',"Colour":'Blue',"SNO":4567,"Sname":'DEF',"Address":'chen'})
+>db.WAREHOUSE.insert({"PNO":1950,"Pname":'chain',"Colour":'Blue',"SNO":3964,"Sname":'GHI',"Address":'mum'})
+>db.WAREHOUSE.insert({"PNO":1919,"Pname":'wheel',"Colour":'White',"SNO":4879,"Sname":'PQR',"Address":'delhi'})
+>db.WAREHOUSE.insert({"PNO":1956,"Pname":'nuts',"Colour":'Black',"SNO":9988,"Sname":'STU',"Address":'kol'})
+
+
+
+>db.WAREHOUSE.find().pretty()
+
+{
+	"_id" : ObjectId("5a0d8f25d11053b18180fdac"),
+	"PNO" : 1947,
+	"Pname" : "bolts",
+	"Colour" : "Black",
+	"SNO" : 1234,
+	"Sname" : "ABC",
+	"Address" : "blore"
+}
+{
+	"_id" : ObjectId("5a0d8f5bd11053b18180fdad"),
+	"PNO" : 1950,
+	"Pname" : "chain",
+	"Colour" : "Blue",
+	"SNO" : 4567,
+	"Sname" : "DEF",
+	"Address" : "chen"
+}
+{
+	"_id" : ObjectId("5a0d8f81d11053b18180fdae"),
+	"PNO" : 1950,
+	"Pname" : "chain",
+	"Colour" : "Blue",
+	"SNO" : 3964,
+	"Sname" : "GHI",
+	"Address" : "mum"
+}
+{
+	"_id" : ObjectId("5a0d8faed11053b18180fdaf"),
+	"PNO" : 1919,
+	"Pname" : "wheel",
+	"Colour" : "White",
+	"SNO" : 4879,
+	"Sname" : "PQR",
+	"Address" : "delhi"
+}
+{
+	"_id" : ObjectId("5a0d8fded11053b18180fdb0"),
+	"PNO" : 1956,
+	"Pname" : "nuts",
+	"Colour" : "Black",
+	"SNO" : 9988,
+	"Sname" : "STU",
+	"Address" : "kol"
+}
+
+
+a.Update the parts identifier 
+
+
+>db.WAREHOUSE.update({"PNO":1950},{$set:{"PNO":2017}},{multi:true})
+
+>db.WAREHOUSE.find().pretty()
+
+Output:
+{
+	"_id" : ObjectId("5a0d8f25d11053b18180fdac"),
+	"PNO" : 1947,
+	"Pname" : "bolts",
+	"Colour" : "Black",
+	"SNO" : 1234,
+	"Sname" : "ABC",
+	"Address" : "blore"
+}
+{
+	"_id" : ObjectId("5a0d8f5bd11053b18180fdad"),
+	"PNO" : 2017,
+	"Pname" : "chain",
+	"Colour" : "Blue",
+	"SNO" : 4567,
+	"Sname" : "DEF",
+	"Address" : "chen"
+}
+{
+	"_id" : ObjectId("5a0d8f81d11053b18180fdae"),
+	"PNO" : 2017,
+	"Pname" : "chain",
+	"Colour" : "Blue",
+	"SNO" : 3964,
+	"Sname" : "GHI",
+	"Address" : "mum"
+}
+{
+	"_id" : ObjectId("5a0d8faed11053b18180fdaf"),
+	"PNO" : 1919,
+	"Pname" : "wheel",
+	"Colour" : "White",
+	"SNO" : 4879,
+	"Sname" : "PQR",
+	"Address" : "delhi"
+}
+{
+	"_id" : ObjectId("5a0d8fded11053b18180fdb0"),
+	"PNO" : 1956,
+	"Pname" : "nuts",
+	"Colour" : "Black",
+	"SNO" : 9988,
+	"Sname" : "STU",
+	"Address" : "kol"
+}
+
+
+b.Display all suppliers who supply the part with part identifier: 2017
+
+
+>db.WAREHOUSE.find({"PNO":2017}).pretty()
+
+
+Output:
+{
+	"_id" : ObjectId("5a0d8f5bd11053b18180fdad"),
+	"PNO" : 2017,
+	"Pname" : "chain",
+	"Colour" : "Blue",
+	"SNO" : 4567,
+	"Sname" : "DEF",
+	"Address" : "chen"
+}
+{
+	"_id" : ObjectId("5a0d8f81d11053b18180fdae"),
+	"PNO" : 2017,
+	"Pname" : "chain",
+	"Colour" : "Blue",
+	"SNO" : 3964,
+	"Sname" : "GHI",
+	"Address" : "mum"
+}
+

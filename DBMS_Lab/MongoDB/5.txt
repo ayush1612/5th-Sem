@@ -1,0 +1,82 @@
+
+5.Create the below tables, insert suitable tuples and perform the following operations using  MongoDB
+BOOK (ISBN, TITLE, AUTHOR, PUBLISHER)
+BORROW (ISBN, USN, DATE)
+a.Obtain the name of the student who has borrowed the book bearing ISBN "123‟ 
+b.Obtain the Names of students who have borrowed database books.
+
+
+
+Solution:
+
+Create the collection:
+>db.createCollection("LIBRARY")
+
+
+Insert the values:
+
+>db.LIBRARY.insert({"ISBN":1122,"TITLE":'datbase',"AUTHOR":'ABC',"PUBLISHER":'selina',"SSN":2015,"date":'2017-05-29'})
+>db.LIBRARY.insert({"ISBN":2233,"TITLE":'datbase',"AUTHOR":'DEF',"PUBLISHER":'mcgraw',"SSN":2016,"date":'2017-06-29' })
+>db.LIBRARY.insert({"ISBN":3344,"TITLE":'dip',"AUTHOR":'GHI',"PUBLISHER":'gonzalez',"SSN":2017,"date":'2016-06-29' })
+>db.LIBRARY.insert({"ISBN":3355,"TITLE":'os',"AUTHOR":'LKB',"PUBLISHER":'pearson',"SSN":2018,"date":'2016-06-01' })
+
+
+>db.LIBRARY.find().pretty()
+
+
+
+
+{
+	"_id" : ObjectId("5a0d9ffcd11053b18180fdbe"),
+	"ISBN" : 1122,
+	"TITLE" : "datbase",
+	"AUTHOR" : "ABC",
+	"PUBLISHER" : "selina",
+	"SSN" : 2015,
+	"date" : "2017-05-29"
+}
+{
+	"_id" : ObjectId("5a0da030d11053b18180fdbf"),
+	"ISBN" : 2233,
+	"TITLE" : "datbase",
+	"AUTHOR" : "DEF",
+	"PUBLISHER" : "mcgraw",
+	"SSN" : 2016,
+	"date" : "2017-06-29"
+}
+{
+	"_id" : ObjectId("5a0da06dd11053b18180fdc0"),
+	"ISBN" : 3344,
+	"TITLE" : "dip",
+	"AUTHOR" : "GHI",
+	"PUBLISHER" : "gonzalez",
+	"SSN" : 2017,
+	"date" : "2016-06-29"
+}
+{
+	"_id" : ObjectId("5a0da0b6d11053b18180fdc1"),
+	"ISBN" : 3355,
+	"TITLE" : "os",
+	"AUTHOR" : "LKB",
+	"PUBLISHER" : "pearson",
+	"SSN" : 2018,
+	"date" : "2016-06-01"
+}
+
+
+a.Obtain the name of the student who has borrowed the book bearing ISBN "1122‟ 
+
+>db.LIBRARY.find({"ISBN":1122},{"SSN":1,_id:0}).pretty()
+
+  OUTPUT:
+          { "SSN" : 2015 }
+
+
+b.Obtain the Names of students who have borrowed database books.
+ 
+>db.LIBRARY.find({"TITLE":'datbase'},{"SSN":1,_id:0}).pretty()
+
+OUTPUT:
+	{ "SSN" : 2015 }
+	{ "SSN" : 2016 }
+
